@@ -14,12 +14,12 @@
 \DeclareOption{lineno}{\@reqslinenotrue}
 
 %% Definitions for adding placeholder journal elements
-\def\@jlogo{example-image-16x9}
-\def\@jname{mSystems}
-\def\@jyear{20xx}
-\def\@jpages{m--n}
-\def\@jvolume{xx}
-\def\@jissue{x}
+\def\@jlogo{}
+\def\@jname{}
+\def\@jyear{}
+\def\@jpages{}
+\def\@jvolume{}
+\def\@jissue{}
 \def\@jwebsite{}
 
 \def\@affil{}
@@ -33,7 +33,7 @@
 
 \def\@papertype{Author Manuscript}
 \def\@paperfield{}
-\def\@paperdoi{00.0000/xxx.yyyy}
+\def\@paperdoi{}
 
 \ProcessOptions\relax
 
@@ -50,14 +50,8 @@
 \newcommand{\jpages}[1]{\def\@jpages{#1}}
 \newcommand{\jwebsite}[1]{\def\@jwebsite{#1}}
 
-
-\newcommand{\affil}[1]{\def\@affil{#1}}
 \newcommand{\runningauthor}[1]{\def\@runningauthor{#1}}
 \newcommand{\runningtitle}[1]{\def\@runningtitle{#1}}
-\newcommand{\corraddress}[1]{\def\@corraddress{#1}}
-% \newcommand{\corremail}[1]{\def\@corremail{#1}}
-% \newcommand{\fundinginfo}[1]{\def\@fundinginfo{#1}}
-\newcommand{\presentaddress}[1]{\appto{\@presentaddress}{#1\par}}
 \newcommand{\equalcontrib}[1]{\def\@equalcontrib{#1}}
 
 
@@ -100,17 +94,6 @@ marginparwidth=2.15in,marginparsep=0.2in]{geometry}
 \newenvironment{fullwidth}{\begin{adjustwidth}{}{-2.35in}}{\end{adjustwidth}}
 
 %% Title and author block
-\newcommand{\afn}[1]{\textsuperscript{#1}}
-
-\RequirePackage{alphalph}
-\newalphalph{\fnsymbolmult}[mult]{\@fnsymbol}{5}
-
-\newcounter{authorfn}
-\setcounter{authorfn}{1}
-\newcommand{\authfn}[1]{%
-  \fnsymbolmult{#1}%
-}
-
 
 \newcommand{\infobox}{%
 \begin{mdframed}%
@@ -126,14 +109,22 @@ marginparwidth=2.15in,marginparsep=0.2in]{geometry}
 This is a draft manuscript, pre-submission\par
 \end{mdframed}
 }
+
+\RequirePackage{authblk}
+\renewcommand\Authfont{\bfseries}
+\renewcommand\Affilfont{\normalfont\scriptsize}
+\setlength{\affilsep}{0.3em}
+\newcommand{\corrauthor}[2][]{\affil[#1]{Correspondence: #2}}
 \renewcommand{\maketitle}{%
   \null\vskip2\baselineskip%
   {\noindent\bfseries\raggedright\huge\@title\par}
   \vskip2\baselineskip
-  %{\noindent\raggedright\bfseries\@author\par}%
-  \@affil\par
-  {\noindent\raggedright\scriptsize%
-    %% v1.3: More co-first authorship below affiliations.
+  {\noindent\bfseries\raggedright\normalfont
+  \@author
+  \par}
+  {\noindent\raggedright\scriptsize
+  \@affil
+  \par
   \ifdefstring{\@equalcontrib}{}{}{\@equalcontrib\par}}%
   \thispagestyle{firstpage}%
 }
