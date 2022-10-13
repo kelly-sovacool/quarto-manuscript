@@ -1,1 +1,13 @@
 .DS_Store
+.Rproj.user
+.Rhistory
+/manuscript.cls
+/msystems.bst
+/jabbrv.sty
+/jabbrv-ltwa-all.ldf
+/jabbrv-ltwa-en.ldf
+/template.aux
+/template.log
+/template.tex
+/template.html
+/template_files/
