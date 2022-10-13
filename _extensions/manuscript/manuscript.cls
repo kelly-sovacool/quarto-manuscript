@@ -87,7 +87,7 @@
 \RequirePackage[letterpaper,
 left=0.6in,right=1in,
 top=1in,bottom=0.6in,
-columnsep=2em,headheight=24.2pt,
+columnsep=2em,headheight=12pt,
 headsep=0.35in,footskip=0.25in,
 marginparwidth=0in,marginparsep=0.2in,
 includehead,includefoot,heightrounded,
