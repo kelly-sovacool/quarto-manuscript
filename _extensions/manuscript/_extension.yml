@@ -14,6 +14,8 @@ contributes:
       knitr:
         opts_chunk:
           echo: false
+      date: today
+      date-format: iso
     pdf:
       documentclass: manuscript
       classoption:
@@ -31,6 +33,7 @@ contributes:
         - include-in-header.tex
       template-partials:
         - partials/_authors.tex
+        - partials/_affiliations.tex
         - partials/title.tex
         - partials/before-body.tex
         - partials/graphics.tex

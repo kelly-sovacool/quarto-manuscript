@@ -3,22 +3,24 @@ $--
 $-- %%%% TODO %%%%%
 $-- Customize is needed, otherwise remove this partials to use Quarto default one
 $-- %%%%%%%%%%%%%%%%
-%$if(has-frontmatter)$
-%\frontmatter
-%$endif$
+$if(has-frontmatter)$
+\frontmatter
+$endif$
 
 $if(title)$
-    \maketitle
-    $if(abstract)$
-        \begin{abstract}
-        $abstract$
-        $if(importance)$
-            \begin{importance}
-            $importance$
-            \end{importance}
-        $endif$
-        \end{abstract}
-    $endif$
+\maketitle
+$endif$
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+$if(importance)$
+\begin{importance}
+$importance$
+\end{importance}
+$endif$
+\end{abstract}
 $endif$
 
 \keywords{$keywords$}
+\infobox

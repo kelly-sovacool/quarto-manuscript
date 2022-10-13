@@ -31,7 +31,7 @@
 \def\@presentaddress{}
 \def\@equalcontrib{}
 
-\def\@papertype{Research Article}
+\def\@papertype{Author Manuscript}
 \def\@paperfield{}
 \def\@paperdoi{00.0000/xxx.yyyy}
 
@@ -124,24 +124,19 @@ marginparwidth=2.15in,marginparsep=0.2in]{geometry}
 \setlength{\parskip}{0.5em}%
 \textbf{Compiled} \today\\
 This is a draft manuscript, pre-submission\par
-Address correspondence to \@corraddress.\par
-\ifdefstring{\@presentaddress}{}{}{\@presentaddress\par}
 \end{mdframed}
 }
-
 \renewcommand{\maketitle}{%
   \null\vskip2\baselineskip%
   {\noindent\bfseries\raggedright\huge\@title\par}
   \vskip2\baselineskip
-  {\noindent\raggedright\bfseries\@author\par}%
+  %{\noindent\raggedright\bfseries\@author\par}%
+  \@affil\par
   {\noindent\raggedright\scriptsize%
-  \marginpar{\vskip-1em\infobox}%
-  \@affil\par%
-  %% v1.3: More co-first authorship below affiliations.
+    %% v1.3: More co-first authorship below affiliations.
   \ifdefstring{\@equalcontrib}{}{}{\@equalcontrib\par}}%
   \thispagestyle{firstpage}%
 }
-
 %% Coloured abstract
 \RequirePackage[runin]{abstract}
 \setlength{\absleftindent}{0pt}
@@ -172,7 +167,7 @@ Address correspondence to \@corraddress.\par
 \cfoot{%
   \tikz[remember picture,overlay]
   \node[transform shape,rotate=90,anchor=north,yshift=-6pt,text=gray] at (current page.west)
-  {\foreach \n in {1,...,10}{mSystems Submission Template\hspace{1em}}};
+  {\foreach \n in {1,...,10}{Author Manuscript\hspace{1em}}};
 }
 \pagestyle{fancy}
 
