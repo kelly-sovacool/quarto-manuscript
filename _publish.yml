@@ -1,0 +1,4 @@
+- source: template.qmd
+  quarto-pub:
+    - id: 7820853a-c666-4025-88f6-99f17d3b2561
+      url: 'https://quartopub.com/sites/kelly-sovacool/manuscript-preprint-template'
