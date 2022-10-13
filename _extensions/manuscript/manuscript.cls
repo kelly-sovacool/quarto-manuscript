@@ -208,11 +208,9 @@ This is a draft manuscript, pre-submission\par
 \setlength{\bibsep}{0pt}
 \renewcommand{\bibpreamble}{%
   \nolinenumbers%
-  \setlength{\multicolsep}{0pt}%
-  \begin{fullwidth}
-  \begin{multicols}{2}%
+  \setlength{\multicolsep}{0pt}
 }
-\preto{\endthebibliography}{\end{multicols}\end{fullwidth}}
+\preto{\endthebibliography}{}
 
 %% Lists
 \RequirePackage{enumitem}
