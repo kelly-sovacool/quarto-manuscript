@@ -81,15 +81,17 @@
 \if@reqslineno\linenumbers\fi
 
 %% Colours
-\definecolor{sectioncolor}{RGB}{186,70,65}
+\definecolor{sectioncolor}{HTML}{00274C}
 
 %% Page geometry
 \RequirePackage[letterpaper,
-left=0.6in,right=3in,
+left=0.6in,right=1in,
 top=1in,bottom=0.6in,
 columnsep=2em,headheight=24.2pt,
 headsep=0.35in,footskip=0.25in,
-marginparwidth=2.15in,marginparsep=0.2in]{geometry}
+marginparwidth=0in,marginparsep=0.2in,
+includehead,includefoot,heightrounded,
+]{geometry}
 
 \newenvironment{fullwidth}{\begin{adjustwidth}{}{-2.35in}}{\end{adjustwidth}}
 
@@ -150,9 +152,8 @@ This is a draft manuscript, pre-submission\par
 \addtolength{\headwidth}{\marginparwidth}
 \renewcommand{\headrule}{}
 \fancyhf{}
-\lhead{\footnotesize\ifnumodd{\thepage}{\@runningtitle}{\@runningauthor}}
-\rhead{}
-%\lfoot{\footnotesize Volume \@jvolume\quad Issue \@jissue}
+\lhead{\footnotesize{\@runningauthor}}
+\rhead{\footnotesize{\@runningtitle}}
 \lfoot{}
 \rfoot{\footnotesize\@jwebsite\quad\textbf{\thepage}}
 \cfoot{%
