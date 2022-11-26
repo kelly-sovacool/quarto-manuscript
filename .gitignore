@@ -1,6 +1,7 @@
 .DS_Store
 .Rproj.user
 .Rhistory
+/.luarc.json
 /manuscript.cls
 /msystems.bst
 /jabbrv.sty
