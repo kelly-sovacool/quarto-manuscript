@@ -1,24 +1,32 @@
 ---
 title: |
   A simple manuscript/preprint template for quarto
-runningtitle: Manuscript template
-runningauthor: FirstAuthor
-papertype: Preprint
 format:
   manuscript-pdf:
     keep-tex: true
     linenumbers: true
     doublespacing: true
+runningtitle: Manuscript template
+runningauthor: FirstAuthor
+papertype: Preprint
 author:
   - name: Firstname1 Lastname1
     affiliations:
-      - dept, university
+      - Dept, University
     orcid: 0000-0000-0000-0000
+    equal-contributor: true
   - name: Firstname2 Lastname2
     affiliations:
-      - dept, university
+      - Dept, University
       - Another Affiliation
-    email: me@email.com
+    orcid: 0000-0000-0000-0000
+    equal-contributor: true
+  - name: Firstname3 Lastname3
+    affiliations:
+      - Another University
+    orcid: 0000-0000-0000-0000
+    email: me@example.com
+    corresponding: true
 abstract: |
     \lipsum[1]
 importance: |
