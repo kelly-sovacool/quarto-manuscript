@@ -6,8 +6,8 @@ format:
     keep-tex: true
     linenumbers: true
     doublespacing: true
-runningtitle: Manuscript template
-runningauthor: FirstAuthor
+runningtitle: Draft manuscript template
+runningauthor: FirstAuthorLastname
 papertype: Preprint
 author:
   - name: Firstname1 Lastname1
@@ -19,12 +19,10 @@ author:
     affiliations:
       - ref: du
       - ref: au
-    orcid: 0000-0000-0000-0000
     equal-contributor: true
   - name: Firstname3 Lastname3
     affiliations:
       - ref: au
-    orcid: 0000-0000-0000-0000
     email: example@email.com
     corresponding: true
 affiliations:
@@ -42,8 +40,10 @@ reference-section-title: References
 bibliography: bibliography.bib  
 ---
 
+\newpage
 # Introduction {#sec-intro}
 
+\orcidlink{https://orcid.org} is an ORCID link.
 \lipsum[3-5]
 
 # Results

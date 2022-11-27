@@ -13,7 +13,7 @@ $endif$
 % authors
 $for(by-author)$
   \author[$for(by-author.affiliations)$$it.number$$sep$,$endfor$$if(by-author.email)$,\textdagger$endif$$if(by-author.equal-contributor)$,*$endif$]
-  {$by-author.name.literal$}
+  {$by-author.name.literal$ $if(by-author.orcid)$\orcidlink{$by-author.orcid$}$endif$}
 $endfor$
 
 $for(by-affiliation)$

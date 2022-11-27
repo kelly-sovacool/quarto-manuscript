@@ -1,12 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% asm-article.cls, v1.3, 2020/02/06
-% Developed by Overleaf
+% manuscript.cls
 %
-% This class file enables authors to prepare
-% manuscripts for submission to ASM.
-%
+% Derived from the asm-article.cls, v1.3 2020/02/06
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{manuscript}[2020/02/06, v1.3]
 

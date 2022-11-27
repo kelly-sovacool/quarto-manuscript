@@ -29,13 +29,9 @@ contributes:
       cite-method: natbib
       biblio-config: false # cls already loads bst file
       pdf-engine: pdflatex
-      header-includes:
-        - \usepackage{orcidlink}
       include-in-header:
         - include-in-header.tex
       template-partials:
-        - partials/_authors.tex
-        - partials/_affiliations.tex
         - partials/title.tex
         - partials/before-body.tex
         - partials/graphics.tex
