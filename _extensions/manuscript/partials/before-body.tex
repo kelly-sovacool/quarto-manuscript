@@ -11,6 +11,10 @@ $if(title)$
 \maketitle
 $endif$
 
+$if(linenumbers)$
+\linenumbers
+$endif$
+
 $if(abstract)$
 \begin{abstract}
 $abstract$
@@ -24,3 +28,7 @@ $endif$
 
 \keywords{$keywords$}
 \infobox
+
+$if(doublespacing)$
+\doublespacing
+$endif$

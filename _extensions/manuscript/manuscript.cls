@@ -10,9 +10,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{manuscript}[2020/02/06, v1.3]
 
-\newif\if@reqslineno
-\DeclareOption{lineno}{\@reqslinenotrue}
-
 %% Definitions for adding placeholder journal elements
 \def\@jlogo{}
 \def\@jname{}
@@ -26,9 +23,6 @@
 \def\@runningauthor{}
 \def\@runningtitle{}
 \def\@corraddress{}
-% \def\@corremail{}
-% \def\@fundinginfo{}
-\def\@presentaddress{}
 \def\@equalcontrib{}
 
 \def\@papertype{Author Manuscript}
@@ -52,6 +46,7 @@
 
 \newcommand{\runningauthor}[1]{\def\@runningauthor{#1}}
 \newcommand{\runningtitle}[1]{\def\@runningtitle{#1}}
+\newcommand{\corraddress}[1]{\def\@corraddress{#1}}
 \newcommand{\equalcontrib}[1]{\def\@equalcontrib{#1}}
 
 
@@ -78,7 +73,6 @@
 \RequirePackage{changepage}
 \RequirePackage{enumitem}
 \RequirePackage[mathlines]{lineno}
-\if@reqslineno\linenumbers\fi
 
 %% Colours
 \definecolor{sectioncolor}{HTML}{00274C}
@@ -96,21 +90,6 @@ includehead,includefoot,heightrounded,
 \newenvironment{fullwidth}{\begin{adjustwidth}{}{-2.35in}}{\end{adjustwidth}}
 
 %% Title and author block
-
-\newcommand{\infobox}{%
-\begin{mdframed}%
-[backgroundcolor=black!10,
- font=\scriptsize,
- hidealllines=true,
- innerleftmargin=1em,
- innerrightmargin=1em,
- innertopmargin=1em,
- innerbottommargin=1em]%
-\setlength{\parskip}{0.5em}%
-\textbf{Compiled} \today\\
-This is a draft manuscript, pre-submission\par
-\end{mdframed}
-}
 
 \RequirePackage{authblk}
 \renewcommand\Authfont{\bfseries}
@@ -130,6 +109,25 @@ This is a draft manuscript, pre-submission\par
   \ifdefstring{\@equalcontrib}{}{}{\@equalcontrib\par}}%
   \thispagestyle{firstpage}%
 }
+
+
+\newcommand{\infobox}{%
+\begin{mdframed}%
+[backgroundcolor=black!10,
+ font=\scriptsize,
+ hidealllines=true,
+ innerleftmargin=1em,
+ innerrightmargin=1em,
+ innertopmargin=1em,
+ innerbottommargin=1em]%
+\setlength{\parskip}{0.5em}%
+\textbf{Compiled} \today\\
+%This is a draft manuscript, pre-submission\par
+\textsuperscript{\textdagger}Correspondence to \@corraddress.\par
+\end{mdframed}
+}
+
+
 %% Coloured abstract
 \RequirePackage[runin]{abstract}
 \setlength{\absleftindent}{0pt}

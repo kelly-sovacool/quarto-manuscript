@@ -29,6 +29,8 @@ contributes:
       cite-method: natbib
       biblio-config: false # cls already loads bst file
       pdf-engine: pdflatex
+      header-includes:
+        - \usepackage{orcidlink}
       include-in-header:
         - include-in-header.tex
       template-partials:
@@ -43,6 +45,7 @@ contributes:
         - jabbrv.sty
         - jabbrv-ltwa-all.ldf
         - jabbrv-ltwa-en.ldf
+        - orcidlink.sty
     html:
       number-sections: false
       toc: true
