@@ -12,21 +12,26 @@ papertype: Preprint
 author:
   - name: Firstname1 Lastname1
     affiliations:
-      - Dept, University
+      - ref: du
     orcid: 0000-0000-0000-0000
     equal-contributor: true
   - name: Firstname2 Lastname2
     affiliations:
-      - Dept, University
-      - Another Affiliation
+      - ref: du
+      - ref: au
     orcid: 0000-0000-0000-0000
     equal-contributor: true
   - name: Firstname3 Lastname3
     affiliations:
-      - Another University
+      - ref: au
     orcid: 0000-0000-0000-0000
-    email: me@example.com
+    email: example@email.com
     corresponding: true
+affiliations:
+    - id: du
+      name: Dept, University
+    - id: au
+      name: Another University
 abstract: |
     \lipsum[1]
 importance: |

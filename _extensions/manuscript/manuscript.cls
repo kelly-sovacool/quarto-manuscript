@@ -95,7 +95,7 @@ includehead,includefoot,heightrounded,
 \renewcommand\Authfont{\bfseries}
 \renewcommand\Affilfont{\normalfont\scriptsize}
 \setlength{\affilsep}{0.3em}
-\newcommand{\corrauthor}[2][]{\affil[#1]{Correspondence: #2}}
+%\newcommand{\corrauthor}[2][]{\affil[#1]{Correspondence: #2}}
 \renewcommand{\maketitle}{%
   \null\vskip2\baselineskip%
   {\noindent\bfseries\raggedright\huge\@title\par}
@@ -123,7 +123,7 @@ includehead,includefoot,heightrounded,
 \setlength{\parskip}{0.5em}%
 \textbf{Compiled} \today\\
 %This is a draft manuscript, pre-submission\par
-\textsuperscript{\textdagger}Correspondence to \@corraddress.\par
+\textsuperscript{\textdagger}Correspondence: \@corraddress.\par
 \end{mdframed}
 }
 
@@ -154,11 +154,11 @@ includehead,includefoot,heightrounded,
 \rhead{\footnotesize{\@runningtitle}}
 \lfoot{}
 \rfoot{\footnotesize\@jwebsite\quad\textbf{\thepage}}
-\cfoot{%
-  \tikz[remember picture,overlay]
-  \node[transform shape,rotate=90,anchor=north,yshift=-6pt,text=gray] at (current page.west)
-  {\foreach \n in {1,...,10}{Author Manuscript\hspace{1em}}};
-}
+%\cfoot{%
+%  \tikz[remember picture,overlay]
+%  \node[transform shape,rotate=90,anchor=north,yshift=-6pt,text=gray] at (current page.west)
+%  {\foreach \n in {1,...,10}{Author Manuscript Preprint \hspace{1em}}};
+%}
 \pagestyle{fancy}
 
 \fancypagestyle{firstpage}{
