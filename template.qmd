@@ -40,10 +40,8 @@ reference-section-title: References
 bibliography: bibliography.bib  
 ---
 
-\newpage
 # Introduction {#sec-intro}
 
-\orcidlink{https://orcid.org} is an ORCID link.
 \lipsum[3-5]
 
 # Results
@@ -56,13 +54,12 @@ bibliography: bibliography.bib
 
 # Materials and Methods
 
-\lipsum[10]
 16S rRNA gene amplicon sequences were processed with mothur and fit to
 existing reference OTUs with the OptiFit algorithm 
 [@schloss_introducing_2009;@sovacool_optifit_2022].
 The mikropml R package was used to train machine learning models and 
 evaluate feature importance [v1.2.0, @topcuoglu_mikropml_2021].
-\lipsum[11]
+\lipsum[10-11]
 
 ## Availability of data and materials
 
