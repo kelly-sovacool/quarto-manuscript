@@ -1,4 +1,4 @@
 style-guide/ linguist-vendored=true
-_extensions/manuscript/manuscript.cls linguist-vendored=true
 _extensions/manuscript/custom.scss linguist-vendored=true
 _extensions/manuscript/*.lua linguist-vendored=true
+_extensions/manuscript/*.sty linguist-vendored=true
