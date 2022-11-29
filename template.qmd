@@ -46,7 +46,13 @@ bibliography: bibliography.bib
 
 # Results
 
-\lipsum[5-7]
+You can include figures and cross-reference them from the text (see @fig-example).
+\lipsum[5]
+
+![An example figure with a caption.](example-figure.png){#fig-example fig.align="left" fig.pos='h'}
+
+\lipsum[6-7]
+
 
 # Discussion
 
