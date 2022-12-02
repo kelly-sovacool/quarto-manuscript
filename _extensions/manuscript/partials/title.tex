@@ -10,22 +10,18 @@ $if(title)$
 \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
 $endif$
 
-% authors
 $for(by-author)$
   \author[$for(by-author.affiliations)$$it.number$$sep$,$endfor$$if(by-author.email)$,\textdagger$endif$$if(by-author.equal-contributor)$,*$endif$]
-  {$by-author.name.literal$$if(by-author.orcid)$\orcidlink{$by-author.orcid$}$endif$}
+  {$if(by-author.orcid)$\orcidlink{$by-author.orcid$}$endif$$by-author.name.literal$}
+  $if(by-author.email)$ % TODO: figure out how to use corresponding=true
+    \corraddress{$by-author.email$}
+  $endif$
 $endfor$
 
 $for(by-affiliation)$
 \affil[$it.number$]{$it.name$}
 $endfor$
 
-$for(by-author)$
-$if(by-author.email)$ % TODO: why can't use correspondence=true?
-  %\corrauthor[*]{$by-author.email$}
-  \corraddress{$by-author.email$}
-$endif$
-$endfor$
 
 % paper meta
 $if(papertype)$
@@ -36,4 +32,7 @@ $if(runningtitle)$
 $endif$
 $if(runningauthor)$
 \runningauthor{$runningauthor$ \textit{et al.}}
+$endif$
+$if(equalcontrib)$
+\equalcontrib{$equalcontrib$}
 $endif$
