@@ -5,3 +5,4 @@ clean.sh
 template.pdf
 _publish.yml
 _quarto.yml
+LICENSE.md
