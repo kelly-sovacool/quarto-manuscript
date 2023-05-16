@@ -254,7 +254,7 @@ includehead,includefoot,heightrounded,
 \renewcommand{\tablename}{TABLE}
 \DeclareCaptionFont{eb}{\fontseries{eb}\selectfont}
 \captionsetup*{labelsep=quad}
-\captionsetup*[figure]{font={bf,small},labelfont={eb}}
+\captionsetup*[figure]{font={small},labelfont={eb}}
 \captionsetup*[table]{labelfont=bf,position=above,skip=0pt}
 
 %% Enable coloured links
